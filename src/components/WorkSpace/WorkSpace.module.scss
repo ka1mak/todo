@@ -8,12 +8,32 @@
     margin-bottom: 5px;
   }
 
-  div {
+  .form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
-    overflow: hidden;
+    position: relative;
+
+    .alert {
+      display: none;
+      position: absolute;
+      bottom: -30px;
+      font-size: 14px;
+      background-color: rgb(220, 220, 220);
+      padding: 5px 10px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: 10px;
+        top: -5px;
+        background-color: rgb(220, 220, 220);
+        transform: rotate(45deg);
+      }
+    }
 
     input {
       width: 100%;
@@ -40,5 +60,23 @@
         background-color: rgb(51, 87, 192);
       }
     }
+  }
+}
+
+.showAlert {
+  display: block !important;
+}
+
+.error {
+  border: 1px solid red !important;
+  animation: errorInput 0.15s linear 2;
+}
+
+@keyframes errorInput {
+  50% {
+    transform: translate(3px, 0);
+  }
+  100% {
+    transform: translate(-3px, 0);
   }
 }
