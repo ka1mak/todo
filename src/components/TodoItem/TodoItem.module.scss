@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin: 8px 0;
+  padding-left: 10px;
+  background-color: rgb(245, 245, 245);
+
+  .delete {
+    background-color: #dc3545;
+    padding: 10px;
+    display: flex;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:active {
+      background-color: #c52939;
+    }
+  }
+}
+
+.completed {
+  background-color: green !important;
+}
