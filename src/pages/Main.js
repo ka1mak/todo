@@ -25,7 +25,7 @@ const Main = () => {
     <div className={cls.root}>
       <div className={cls.container}>
         <WorkSpace action={addNewTodo} />
-        <ul>
+        <ul className={`${todos.length > 8 ? cls.scroll : null}`}>
           {
             todos.length
             ? todos.map(({ id, title, completed }) => (

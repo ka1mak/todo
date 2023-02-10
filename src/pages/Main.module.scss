@@ -5,16 +5,37 @@
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  
+
   .container {
     width: 350px;
-    min-height: 400px;
-    max-height: 500px;
+    height: auto;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
     transition: 0.6s;
     padding: 15px;
+
+    ul {
+      min-height: 300px;
+      max-height: 400px;
+
+      &::-webkit-scrollbar-track {
+        margin-top: 6px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+      }
+      
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #0ae;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%,
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.5, transparent), to(transparent));
+      }
+    }
 
     ul h3 {
       text-align: center;
@@ -24,4 +45,9 @@
       opacity: 0.4;
     }
   }
+}
+
+.scroll {
+  overflow-y: scroll !important;
+  padding-right: 8px;
 }
